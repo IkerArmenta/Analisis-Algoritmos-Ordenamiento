@@ -1,28 +1,34 @@
-Proyecto de Algoritmos de Ordenamiento y Medición de Desempeño
-Este proyecto implementa varios algoritmos clásicos de ordenamiento en C++, y mide su rendimiento en términos de tiempo de ejecución usando arreglos aleatorios. Los resultados se guardan en archivos CSV para cada algoritmo, facilitando el análisis del desempeño.
-Algoritmos Implementados
-Los algoritmos de ordenamiento incluidos en este proyecto son:
+# **Proyecto de Algoritmos de Ordenamiento y Análisis de Tiempos**
 
-Cada uno de estos algoritmos se aplica a un arreglo de números aleatorios generado dinámicamente.
-Estructura del Código
-El código principal está compuesto por las siguientes partes:
+Este proyecto implementa varios algoritmos clásicos de ordenamiento en C++, y mide su rendimiento utilizando arreglos aleatorios. Los tiempos de ejecución se almacenan en archivos CSV generados automáticamente para facilitar el análisis.
 
-Archivos CSV Generados
-Cada algoritmo produce un archivo CSV que contiene los tiempos de ejecución en nanosegundos:
+## **Algoritmos Implementados**
+Los algoritmos de ordenamiento incluidos son:
+- **Inserción** (`insercionOrdenada`)
+- **Burbuja** (`burbujaOrdenada`)
+- **Selección** (`seleccionOrdenada`)
+- **Shell** (`shellOrdenado`)
+- **Merge Sort** (`mezclaWrapper`)
 
-Estos archivos pueden ser usados para analizar el rendimiento, crear gráficos o evaluar la eficiencia de cada algoritmo.
-Cómo Compilar y Ejecutar
-Compilación:
-Usa un compilador de C++ como . Por ejemplo:
+## **Estructura del Código**
+El proyecto incluye:
+- **Funciones de Ordenamiento**: Implementación de los algoritmos mencionados.
+- **Medición de Desempeño**:
+  - `medirDesempeno`: Ejecuta los algoritmos y mide su tiempo de ejecución en nanosegundos.
+  - Los resultados se almacenan en archivos CSV.
+- **Generación de Números Aleatorios**: Cada prueba utiliza datos generados dinámicamente.
+- **Archivo `main.cpp`**: Invoca los algoritmos y almacena los resultados en CSV.
 
-Ejecución:
-Una vez compilado, ejecuta el archivo generado:
+## **Archivos Generados**
+Cada algoritmo produce un archivo CSV con los tiempos de ejecución:
+- `resultado_insercion.csv` – Resultados del algoritmo de Inserción.
+- `resultado_burbuja.csv` – Resultados del algoritmo de Burbuja.
+- `resultado_seleccion.csv` – Resultados del algoritmo de Selección.
+- `resultado_shell.csv` – Resultados del algoritmo de Shell.
+- `resultado_mezcla.csv` – Resultados del algoritmo Merge Sort.
 
-El programa generará los archivos CSV con los tiempos de ejecución para cada algoritmo.
-Personalización
-
-Dependencias
-El proyecto no requiere librerías externas más allá de las estándar de C++:
-
-Autor
-Este proyecto fue creado para experimentar y analizar algoritmos de ordenamiento y cómo sus tiempos de ejecución varían con diferentes métodos.
+## **Cómo Compilar y Ejecutar**
+### **Compilación**
+Usa un compilador como `g++` para compilar el archivo principal:
+```bash
+g++ -o ordenamiento main.cpp -std=c++17
